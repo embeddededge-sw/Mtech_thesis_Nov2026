@@ -1,0 +1,120 @@
+
+xilinx-kv260-starterkit-20251:~/NON-HLS-Bins$ sudo fpgautil -b design_1_wrapper.bit -f Full
+Password: 
+Time taken to load BIN is 134.000000 Milli Seconds
+BIN FILE loaded through FPGA manager successfully
+xilinx-kv260-starterkit-20251:~/NON-HLS-Bins$ sudo ./main_nonhls_app 
+
+==================================================
+  Udemy RTL CNN Inference (No Weights)
+==================================================
+
+Running inference on 100 test images...
+
+Image 0: PASS - Predicted: 7, Expected: 7
+Image 1: PASS - Predicted: 2, Expected: 2
+Image 2: PASS - Predicted: 1, Expected: 1
+Image 3: PASS - Predicted: 0, Expected: 0
+Image 4: PASS - Predicted: 4, Expected: 4
+Image 5: PASS - Predicted: 1, Expected: 1
+Image 6: PASS - Predicted: 4, Expected: 4
+Image 7: PASS - Predicted: 9, Expected: 9
+Image 8: PASS - Predicted: 5, Expected: 5
+Image 9: PASS - Predicted: 9, Expected: 9
+Image 10: PASS - Predicted: 0, Expected: 0
+Image 11: PASS - Predicted: 6, Expected: 6
+Image 12: PASS - Predicted: 9, Expected: 9
+Image 13: PASS - Predicted: 0, Expected: 0
+Image 14: PASS - Predicted: 1, Expected: 1
+Image 15: PASS - Predicted: 5, Expected: 5
+Image 16: PASS - Predicted: 9, Expected: 9
+Image 17: PASS - Predicted: 7, Expected: 7
+Image 18: PASS - Predicted: 3, Expected: 3
+Image 19: PASS - Predicted: 4, Expected: 4
+Image 20: FAIL - Predicted: 7, Expected: 9
+Image 21: PASS - Predicted: 6, Expected: 6
+Image 22: PASS - Predicted: 6, Expected: 6
+Image 23: PASS - Predicted: 5, Expected: 5
+Image 24: PASS - Predicted: 4, Expected: 4
+Image 25: PASS - Predicted: 0, Expected: 0
+Image 26: PASS - Predicted: 7, Expected: 7
+Image 27: PASS - Predicted: 4, Expected: 4
+Image 28: PASS - Predicted: 0, Expected: 0
+Image 29: PASS - Predicted: 1, Expected: 1
+Image 30: PASS - Predicted: 3, Expected: 3
+Image 31: PASS - Predicted: 1, Expected: 1
+Image 32: PASS - Predicted: 3, Expected: 3
+Image 33: FAIL - Predicted: 6, Expected: 4
+Image 34: PASS - Predicted: 7, Expected: 7
+Image 35: FAIL - Predicted: 6, Expected: 2
+Image 36: PASS - Predicted: 7, Expected: 7
+Image 37: PASS - Predicted: 1, Expected: 1
+Image 38: PASS - Predicted: 2, Expected: 2
+Image 39: PASS - Predicted: 1, Expected: 1
+Image 40: PASS - Predicted: 1, Expected: 1
+Image 41: PASS - Predicted: 7, Expected: 7
+Image 42: PASS - Predicted: 4, Expected: 4
+Image 43: PASS - Predicted: 2, Expected: 2
+Image 44: PASS - Predicted: 3, Expected: 3
+Image 45: PASS - Predicted: 5, Expected: 5
+Image 46: PASS - Predicted: 1, Expected: 1
+Image 47: PASS - Predicted: 2, Expected: 2
+Image 48: PASS - Predicted: 4, Expected: 4
+Image 49: PASS - Predicted: 4, Expected: 4
+Image 50: PASS - Predicted: 6, Expected: 6
+Image 51: PASS - Predicted: 3, Expected: 3
+Image 52: PASS - Predicted: 5, Expected: 5
+Image 53: PASS - Predicted: 5, Expected: 5
+Image 54: PASS - Predicted: 6, Expected: 6
+Image 55: PASS - Predicted: 0, Expected: 0
+Image 56: PASS - Predicted: 4, Expected: 4
+Image 57: PASS - Predicted: 1, Expected: 1
+Image 58: PASS - Predicted: 9, Expected: 9
+Image 59: PASS - Predicted: 5, Expected: 5
+Image 60: PASS - Predicted: 7, Expected: 7
+Image 61: PASS - Predicted: 8, Expected: 8
+Image 62: FAIL - Predicted: 8, Expected: 9
+Image 63: PASS - Predicted: 3, Expected: 3
+Image 64: PASS - Predicted: 7, Expected: 7
+Image 65: PASS - Predicted: 4, Expected: 4
+Image 66: PASS - Predicted: 6, Expected: 6
+Image 67: PASS - Predicted: 4, Expected: 4
+Image 68: PASS - Predicted: 3, Expected: 3
+Image 69: PASS - Predicted: 0, Expected: 0
+Image 70: PASS - Predicted: 7, Expected: 7
+Image 71: PASS - Predicted: 0, Expected: 0
+Image 72: PASS - Predicted: 2, Expected: 2
+Image 73: PASS - Predicted: 9, Expected: 9
+Image 74: PASS - Predicted: 1, Expected: 1
+Image 75: PASS - Predicted: 7, Expected: 7
+Image 76: PASS - Predicted: 3, Expected: 3
+Image 77: PASS - Predicted: 2, Expected: 2
+Image 78: PASS - Predicted: 9, Expected: 9
+Image 79: PASS - Predicted: 7, Expected: 7
+Image 80: PASS - Predicted: 7, Expected: 7
+Image 81: PASS - Predicted: 6, Expected: 6
+Image 82: PASS - Predicted: 2, Expected: 2
+Image 83: PASS - Predicted: 7, Expected: 7
+Image 84: PASS - Predicted: 8, Expected: 8
+Image 85: PASS - Predicted: 4, Expected: 4
+Image 86: PASS - Predicted: 7, Expected: 7
+Image 87: PASS - Predicted: 3, Expected: 3
+Image 88: PASS - Predicted: 6, Expected: 6
+Image 89: PASS - Predicted: 1, Expected: 1
+Image 90: PASS - Predicted: 3, Expected: 3
+Image 91: PASS - Predicted: 6, Expected: 6
+Image 92: PASS - Predicted: 9, Expected: 9
+Image 93: PASS - Predicted: 3, Expected: 3
+Image 94: PASS - Predicted: 1, Expected: 1
+Image 95: PASS - Predicted: 4, Expected: 4
+Image 96: PASS - Predicted: 1, Expected: 1
+Image 97: PASS - Predicted: 7, Expected: 7
+Image 98: PASS - Predicted: 6, Expected: 6
+Image 99: PASS - Predicted: 9, Expected: 9
+
+==================================================
+  RESULTS (First 100 images)
+==================================================
+Correct:      96
+Accuracy:     96.0%
+==================================================
