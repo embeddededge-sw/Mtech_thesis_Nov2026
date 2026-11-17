@@ -1,0 +1,11 @@
+## DTS change: -
+File - project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi
+
+/include/ "system-conf.dtsi"
+
+&cnn_top_0 {
+    compatible = "custom,cnn-accel";
+    status = "okay";
+    /* Overwrite the reg property to cover control + BRAMs (256KB total) */
+    reg = <0x0 0xa0000000 0x0 0x40000>;
+};
