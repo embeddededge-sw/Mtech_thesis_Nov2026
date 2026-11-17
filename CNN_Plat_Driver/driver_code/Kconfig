@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: GPL-2.0
+config CNN_KV260
+        tristate "CNN custom IP on KV260"
+        help
+          This is driver for custom CNN IP on KV260
