@@ -1,0 +1,5 @@
+set_property CONFIG.FREQ_HZ {99999001} [get_bd_intf_pins cnn_mnist_mm_0/m_axi_gmem1]
+
+set_property CONFIG.FREQ_HZ {99999001} [get_bd_intf_pins cnn_mnist_mm_0/s_axi_control]
+
+set_property CONFIG.FREQ_HZ {99999001} [get_bd_intf_pins cnn_mnist_mm_0/s_axi_control_r]

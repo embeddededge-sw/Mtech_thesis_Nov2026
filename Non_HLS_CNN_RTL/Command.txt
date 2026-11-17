@@ -1,0 +1,36 @@
+
+
+
+sudo fpgautil -b design_1_wrapper.bit -f Full
+
+ls /dev/cnn0 
+/dev/cnn0
+
+
+lsmod | grep cnn                                                                                                                        
+cnn_accel              12288  0
+
+# Read
+sudo devmem 0xA0000000 32
+
+# Write
+sudo devmem 0xA0010010 32 0xA0020000
+
+# Read after write
+sudo devmem 0xA0010010 32
+0xA0020000
+
+
+sudo devmem 0xA0000014 32
+
+
+
+/home/mirfai/Documents/Kria-KV260/Udemy_Style_CNN_IP/My_IP_Packer/clean_ip_packager/clean_ip_packager.srcs/sources_1/imports/module
+
+conv2_calc.v:51:    initial begin $readmemh(WEIGHT_1, weight_1); $readmemh(WEIGHT_2, weight_2); $readmemh(WEIGHT_3, weight_3); end
+
+conv2_layer.v:53:    initial begin $readmemh("conv2_bias.mem", bias); end
+
+conv1_calc.v:38:    initial begin $readmemh("conv1_weight_1.mem", weight_1); $readmemh("conv1_weight_2.mem", weight_2); $readmemh("conv1_weight_3.mem", weight_3); $readmemh("conv1_bias.mem", bias); end
+
+fully_connected.v:50: 
