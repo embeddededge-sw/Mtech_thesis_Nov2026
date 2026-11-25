@@ -1,0 +1,85 @@
+
+========================================================
+Working on hardware as per Udemy CMNIST instruction: -
+========================================================
+
+I. Copy bitsream and input digit bitmap to kv260board
+
+scp cnn_mnist.bit ubuntu@10.42.0.34:/home/ubuntu/udemy_cmnist
+scp -r bmp/ ubuntu@10.42.0.34:/home/ubuntu/udemy_cmnist
+scp cnn_mnist.hwh ubuntu@10.42.0.34:/home/ubuntu/udemy_cmnist
+
+II. Install "Pynq" if not installed
+
+pip install pynq
+
+OR using below
+
+git clone https://github.com/Xilinx/Kria-PYNQ.git
+cd Kria-PYNQ/
+sudo bash install.sh -b KV260
+
+III. Run commands from Jupyter Notebook
+
+# Access Jupyter interface running on KV260 board from computer.
+
+On browser type: -
+http://10.42.0.34:9090/lab
+Password - xilinx
+
+Click on "Python 3 (ipykernel)"
+
+# Import libraries
+from pynq import Overlay
+from pynq import MMIO
+from pynq import allocate
+import numpy as np
+
+# Program FPGA and Allocate Memory
+
+# Program bitstream to FPGA
+overlay = Overlay('/home/ubuntu/udemy_cmnist/cnn_mnist.bit')
+
+# Access to AXI DMA
+dma = overlay.axi_dma_0
+dma_send = overlay.axi_dma_0.sendchannel
+dma_recv = overlay.axi_dma_0.recvchannel
+
+# Allocate physical memory
+input_buffer = allocate(shape=(784,), dtype=np.uint8)
+output_buffer = allocate(shape=(1,), dtype=np.uint8)
+
+# Testing using Bitmap Image
+
+import re
+import base64
+import io
+from PIL import Image
+from matplotlib import pyplot
+
+# Load and Display Bitmap Data
+# Get bitmap data
+img = Image.open("/home/ubuntu/udemy_cmnist/bmp/train_0.bmp", "r")
+np_img = np.array(img)
+pyplot.imshow(np_img, cmap=pyplot.get_cmap('gray'))
+
+# Write bitmap to physical memory
+np_img_re = np.reshape(np_img, (1,1,1,784))
+for i in range(784):
+    input_buffer[i] = np_img_re[0][0][0][i]
+
+# Do AXI DMA transfer
+dma_send.transfer(input_buffer)
+dma_recv.transfer(output_buffer)
+print("Predicted output: %d" % (output_buffer[0]))
+
+Output: - 
+Predicted output: 5
+
+
+
+sudo -i
+source /etc/profile.d/pynq_venv.sh
+cd /home/ubuntu/udemy_cmnist
+python3 cnn_benchmark.py bmp/ 5000
+exit
