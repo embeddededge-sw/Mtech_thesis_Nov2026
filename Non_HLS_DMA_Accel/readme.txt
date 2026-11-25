@@ -33,3 +33,8 @@ Accuracy         : 100.00 %
 Elapsed time     : 1074833137 ns
 Elapsed time     : 1.074833137 s
 ================================================================
+
+
+Note: -
+The folder - "nonhls_purertl_dma_accel/" must contain below files for it to work with python script.
+cnn_benchmark.py, cnn_mnist.bit, cnn_mnist.hwh and bmp/ folder. The bmp/ folder contains all images of digits and label.txt.
