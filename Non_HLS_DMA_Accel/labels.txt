@@ -1,0 +1,10 @@
+digit 0: train_1.bmp
+digit 1: train_3.bmp, train_6.bmp, train_8.bmp, train_14.bmp
+digit 2: train_5.bmp, train_16.bmp
+digit 3: train_7.bmp, train_10.bmp, train_12.bmp
+digit 4: train_2.bmp, train_9.bmp
+digit 5: train_0.bmp, train_11.bmp
+digit 6: train_13.bmp, train_18.bmp
+digit 7: train_15.bmp
+digit 8: train_17.bmp
+digit 9: train_4.bmp, train_19.bmp
