@@ -8,7 +8,7 @@ Usage: - python3 cnn_benchmark.py <path of bmp/ folder having test images and la
 Command: - 
 sudo -i
 source /etc/profile.d/pynq_venv.sh
-cd /home/ubuntu/udemy_cmnist
+cd /home/ubuntu/nonhls_purertl_dma_accel/
 python3 cnn_benchmark.py bmp/ 5000
 exit
 
