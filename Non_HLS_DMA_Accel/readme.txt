@@ -9,7 +9,7 @@ Command: -
 sudo -i
 source /etc/profile.d/pynq_venv.sh
 cd /home/ubuntu/nonhls_purertl_dma_accel/
-python3 cnn_benchmark.py bmp/ 5000
+python3 cnn_benchmark.py bmp/ 10000
 exit
 
 Typical O/p - 
